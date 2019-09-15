@@ -15,4 +15,8 @@ public class TestGlide  {
         Toast toast = Toast.makeText(activity,"MyGradle2.TestGlide",Toast.LENGTH_SHORT);
         toast.show();
     }
+
+    public void Glide_Demo1( Activity activity){
+        Glide.with(activity);
+    }
 }
