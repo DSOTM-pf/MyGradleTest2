@@ -17,6 +17,7 @@ public class TestMyLibrary1 {
         {
             Toast toast = Toast.makeText(MainActivity,"MyGradle2",Toast.LENGTH_SHORT);
             toast.show();
+            Log.e("TestMyLibrary1:",people.getName());
         }
     }
     public void Demo2()

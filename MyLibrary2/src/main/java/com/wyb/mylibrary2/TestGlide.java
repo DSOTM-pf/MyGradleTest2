@@ -7,6 +7,7 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 
 public class TestGlide  {
+
     public void SetImageView( Activity activity,ImageView imageView)
     {
         String url = "http://cn.bing.com/az/hprichbg/rb/Dongdaemun_ZH-CN10736487148_1920x1080.jpg";
