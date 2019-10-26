@@ -35,7 +35,7 @@ public class TestMyLibrary1 extends Activity {
         Log.e("MyGradle:","Demo2");
     }
 
-    public void Demo3(Activity activity){
+    public static void Demo3(Activity activity){
         //请求READ_PHONE_NUMBERS
         //检查是否获取到权限
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
