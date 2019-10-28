@@ -2,11 +2,13 @@ package com.wyb.mylibrary2;
 
 import android.Manifest;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.Settings;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.webkit.PermissionRequest;
 import android.widget.Toast;
@@ -39,7 +41,7 @@ public class TestMyLibrary1 extends Activity {
         //请求READ_PHONE_NUMBERS
         //检查是否获取到权限
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            String[] permissions = new String[]{Manifest.permission.READ_PHONE_NUMBERS}; // 选择你需要申请的权限
+            String[] permissions = new String[]{Manifest.permission.PROCESS_OUTGOING_CALLS}; // 选择你需要申请的权限
             for (int i = 0; i < permissions.length; i++) {
                 int state = ContextCompat.checkSelfPermission(activity, permissions[i]);
                 if (state != PackageManager.PERMISSION_GRANTED) { // 判断权限的状态
@@ -49,6 +51,13 @@ public class TestMyLibrary1 extends Activity {
             }
         }
 
+    }
+    //测试app.25,lib.26
+    public static void Demo4(Activity activity)
+    {
+        TelephonyManager  telephonyManager = (TelephonyManager)activity.getApplicationContext().
+                getSystemService(Context.TELEPHONY_SERVICE);
+        String PhoneNumber = telephonyManager.getLine1Number();
     }
 
     @Override
